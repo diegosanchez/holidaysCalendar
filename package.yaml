@@ -1,0 +1,46 @@
+name:                Holidays
+version:             0.1.0.0
+description:         Please see the README on GitHub at <https://github.com/diegosanchez/Holidays#readme>
+github:              "diegosanchez/Holidays"
+homepage:            https://github.com/diegosanchez/Holidays#readme
+bug-reports:         https://github.com/diegosanchez/Holidays/issues
+license:             BSD3
+author:              "DiegoS"
+maintainer:          "diego.sanches@gmail.com"
+copyright:           "none"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            none
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/diegosanchez/Holidays#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+  dependencies:
+  - time
+
+tests:
+  spec:
+    defaults: hspec/hspec@master
+    dependencies:
+    - Holidays
+    - base >=4.7 && <5
+    - hspec ==2.*
+    - hspec-discover
+    - tasty
+    - tasty-smallcheck
+    - tasty-hunit
+    - tasty-hspec 
+    - tasty-quickcheck
+    - time
